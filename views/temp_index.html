@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLMc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../public/css/home_nav.css">
+    <link rel="stylesheet" href="../public/css/home_body.css">
+    <link rel="stylesheet" href="../public/css/sign_up.css">
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="logo">BRAND</div>
+        <div><i class="fa-solid fa-bars" id="burger"></i></div>
+        <div id="sidebar">
+          <ul id="options">
+            <li class="op" id="op1">
+              <button onclick="home()">Home</button>
+            </li>
+            <li class="op" id="op2"> 
+              <button onclick="about()">About</button>
+            </li>
+            <li class="op" id="op3">
+              <button onclick="rules()">Rules</button>
+            </li>
+            <li class="op" id="op4">
+              <button onclick="signup()">Sign up</button>
+            </li>
+            <li class="op" id="op5">
+              <button>Feedback</button>
+            </li>
+            <div class="icon"><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-square-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="mask"></div>
+    <section class="text_sec" id="welcome">
+      <h1>welcome</h1>
+      <p class="wp">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum cupiditate quae ut natu s nisi suscipit
+        aspernatur quisquam dicta vitae tenetur repellat molestias expedita quas rerum cum reiciendis, aliquid aut
+        libero ullam consequatur!
+      </p>
+    </section>
+    <section class="img_sec" id="img">
+      <div class="slick_slider">
+        <div class="slide" id="img1" data-="active">
+          <div class="img_container"><img src="../public/img/img1.jpg" alt="" srcset=""></div>
+        </div>
+        <div class="slide" id="img2">
+          <div class="img_container"><img src="../public/img/img2.jpg" alt="" srcset=""></div>
+        </div>
+        <div class="slide" id="img3">
+          <div class="img_container"><img src="../public/img/img3.jpg" alt="" srcset=""></div>
+        </div>
+        <div class="slide" id="img4">
+          <div class="img_container"><img src="../public/img/img4.jpg" alt="" srcset=""></div>
+        </div>
+        <div class="slide" id="img5">
+          <div class="img_container"><img src="../public/img/img5.jpg" alt="" srcset=""></div>
+        </div>
+        <div class="slide" id="img6">
+          <div class="img_container"><img src="../public/img/img6.jpg" alt="" srcset=""></div>
+        </div>
+      </div>
+      <div class="direction">
+        <div class="arrow_prev"><i class="fa-solid fa-arrow-left-long"></i></div>
+        <div class="arrow_next"><i class="fa-solid fa-arrow-right-long"></i></div>
+      </div>
+    </section>
+    <section class="text_sec" id="">
+      <p>
+        Eligendi agnam eius eaque quo, quod voluptatem earum voluptatibus est, explicabo laboriosam esse et! Quidem
+        in, atque quam amet ipsa iure facere quaerat blanditiis nam cupiditate quia, neque ipsam libero tenetur!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas voluptas harum similique magnam natus quo
+        tenetur earum exercitationem ullam eos saepe quod fuga molestiae magni reiciendis rerum corporis quae
+        soluta, id dolor eius labore veniam illum. Possimus dignissim eligendi suscipit quasi distinctio,
+        exercitationem molestias totam excepturi recusandae maiores consequuntur nostrum qui? Repellat amet
+        laboriosam nulla!
+      </p>
+    </section>
+    <div id="sign_up">
+      <div id="sign_up_head">
+        <p class="display-6">Sign up</p>
+        <button onclick="sign_up_close()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form id="sign_up_form" action="/form" method="post">
+        <div class="form-floating mb-1">
+          <input class="form-control" type="text" name="username" placeholder="name@example.com">
+          <label for="floatingInput">Username</label>
+        </div>
+        <div class="form-floating mb-1">
+          <input class="form-control" type="email" name="email" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-1">
+          <input class="form-control" type="password" name="psw" placeholder="name@example.com">
+          <label for="floatingInput">Password</label>
+        </div>
+        <div class="form-floating mb-1">
+          <input class="form-control" type="password" name="cpsw" placeholder="name@example.com">
+          <label for="floatingInput">Confirm Password</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" id="flexCheckDefault" type="checkbox" name="tac">
+          <label class="form-check-label" for="flexCheckDefault">I accept the terms and condition applied</label>
+        </div>
+        <div class="sign_up_btn">
+          <input class="btn btn-outline-primary" type="submit" value="create">
+          <input class="btn btn-outline-primary" type="reset" value="reset">
+        </div>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $('.slick_slider').slick({
+      prevArrow: '.arrow_prev',
+      nextArrow: '.arrow_next',
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      responsive: [
+      {
+      breakpoint: 1024,
+      settings: {
+      nextArrow: false,
+      prevArrow: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: false
+      }
+      },
+      {
+      breakpoint: 600,
+      settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+      }
+      }
+      ]
+      });
+    </script>
+    <script src="../public/js/home.js"></script>
+  </body>
+</html>

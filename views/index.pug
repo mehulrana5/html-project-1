@@ -1,0 +1,82 @@
+extends layout.pug 
+block links
+    link(rel='stylesheet', type='text/css', href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css')
+
+block content
+    section#welcome.text_sec
+        h1
+            | welcome
+        p.wp
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum cupiditate quae ut natu s nisi suscipit
+            | aspernatur quisquam dicta vitae tenetur repellat molestias expedita quas rerum cum reiciendis, aliquid aut
+            | libero ullam consequatur!
+    section#img.img_sec
+        .slick_slider
+            #img1.slide(data-='active')
+                .img_container
+                    img(src='./public/img/img1.jpg', alt='', srcset='')
+            #img2.slide
+                .img_container
+                    img(src='./public/img/img2.jpg', alt='', srcset='')
+            #img3.slide
+                .img_container
+                    img(src='./public/img/img3.jpg', alt='', srcset='')
+            #img4.slide
+                .img_container
+                    img(src='./public/img/img4.jpg', alt='', srcset='')
+            #img5.slide
+                .img_container
+                    img(src='./public/img/img5.jpg', alt='', srcset='')
+            #img6.slide
+                .img_container
+                    img(src='./public/img/img6.jpg', alt='', srcset='')
+        .direction
+            .arrow_prev
+                i.fa-solid.fa-arrow-left-long
+            .arrow_next
+                i.fa-solid.fa-arrow-right-long
+    section.text_sec(id='')
+        p
+            | Eligendi agnam eius eaque quo, quod voluptatem earum voluptatibus est, explicabo laboriosam esse et! Quidem
+            | in, atque quam amet ipsa iure facere quaerat blanditiis nam cupiditate quia, neque ipsam libero tenetur!
+        p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas voluptas harum similique magnam natus quo
+            | tenetur earum exercitationem ullam eos saepe quod fuga molestiae magni reiciendis rerum corporis quae
+            | soluta, id dolor eius labore veniam illum. Possimus dignissim eligendi suscipit quasi distinctio,
+            | exercitationem molestias totam excepturi recusandae maiores consequuntur nostrum qui? Repellat amet
+            | laboriosam nulla!
+
+append script
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js', integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', crossorigin='anonymous')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js')
+    script.
+        $('.slick_slider').slick({
+        prevArrow: '.arrow_prev',
+        nextArrow: '.arrow_next',
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        responsive: [
+        {
+        breakpoint: 1024,
+        settings: {
+        nextArrow: false,
+        prevArrow: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+        }
+        },
+        {
+        breakpoint: 600,
+        settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+        }
+        }
+        ]
+        });

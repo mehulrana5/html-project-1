@@ -1,0 +1,81 @@
+doctype html 
+html
+    head
+        block head
+            meta(charset='UTF-8')
+            meta(http-equiv='X-UA-Compatible', content='IE=edge')
+            meta(name='viewport', content='width=device-width, initial-scale=1.0')
+            title GLMc
+            link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css')
+        block links            
+            link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css")
+        block style 
+            style 
+                include ../public/css/home_body.css
+                include ../public/css/home_nav.css
+                include ../public/css/sign_up.css
+    body
+        block nav
+            nav
+                .navbar
+                    .logo
+                        | BRAND
+                    div
+                        i#burger.fa-solid.fa-bars
+                    #sidebar
+                        ul#options
+                            li#op1.op
+                                button(onclick='home()')
+                                    | Home
+                            li#op2.op  
+                                button(onclick='about()')
+                                    | About
+                            li#op3.op
+                                button(onclick='rules()')
+                                    | Rules
+                            li#op4.op
+                                button(onclick='signup()')
+                                    | Sign up
+                            li#op5.op
+                                button
+                                    | Feedback
+                            .icon
+                                a(href='#')
+                                    i.fa-brands.fa-facebook
+                                a(href='#')
+                                    i.fa-brands.fa-square-twitter
+                                a(href='#')
+                                    i.fa-brands.fa-instagram
+        .mask
+        block content_style
+        block content
+        block signup
+            .container.right-panel-active
+                // Sign Up
+                button.cross(onclick='close_up()')
+                    span#line1.line
+                    span#line2.line
+                .container__form.container--signup
+                    form#form1.form(action='#')
+                        h2.form__title Sign Up
+                        input.input(type='text', placeholder='User')
+                        input.input(type='email', placeholder='Email')
+                        input.input(type='password', placeholder='Password')
+                        button.btn Sign Up
+                // Sign In
+                .container__form.container--signin
+                    form#form2.form(action='#')
+                        h2.form__title Sign In
+                        input.input(type='email', placeholder='Email')
+                        input.input(type='password', placeholder='Password')
+                        a.link(href='#') Forgot your password?
+                        button.btn Sign In
+                // Overlay
+                .container__overlay
+                    .overlay
+                        .overlay__panel.overlay--left
+                            button#signIn.btn Sign In
+                        .overlay__panel.overlay--right
+                            button#signUp.btn Sign Up
+        block script   
+            script(src='../public/js/home.js')

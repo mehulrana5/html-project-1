@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(8, 8, 8, 0.829);
+}
+nav{
+    margin: 0;
+    /* border: green solid; */
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    height: 90px;
+    width: 100%;
+    z-index: 1;
+}
+.navbar{
+    /* border: white solid; */
+    display: flex;
+    align-items: center;
+    height: 80px;
+    justify-content: space-between;
+    padding: 0px 60px;
+    color: rgba(240, 233, 233, 0.959);
+    font-size:1.5em;
+}
+nav .logo{
+    /* border: red solid; */
+    height: fit-content;
+}
+#sidebar{
+    /* border: blue solid; */
+    padding-top: .55%;
+    width: 60%;
+}
+#sidebar ul{
+    /* border: red solid; */
+    display: flex;
+    justify-content: space-evenly;
+    overflow-y: auto;
+    /* height: 100vh; */
+}
+#sidebar ul li{
+    list-style: none;
+}
+#sidebar ul li button{
+    border: black solid;
+    background-color: black;
+    border-radius: 10px;
+    color: rgba(240, 233, 233, 0.959);
+    font-size:1em;
+    padding: .5em;
+}
+#sidebar ul li button:hover{
+    color: black;
+    background-color:white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#sidebar ul .icon{
+    display: none;
+}
+nav ul .icon a:hover{
+    background-color: rgba(56, 53, 53, 0.952);
+    /* font-size: larger; */
+}
+.mask{
+    height: 80px;
+    border: red solid;
+}
+#burger{
+    display: none;
+    /* border: red solid; */
+}
+#burger:hover{
+    cursor: pointer;
+}
+@media (max-width:1020px){
+    #burger{
+        display: block;
+    }
+    #sidebar{
+        position: fixed; 
+        top: 0px;
+        left: -100%;
+        height: 100vh;
+        z-index: -1;
+        /* border: white solid; */
+        background-color: black;
+        transition: 0.7s;
+    }   
+    #sidebar.active{
+        /* position: fixed;  */
+        top: 0;
+        left: 0;
+        height: 100vh;
+        /* border: red solid; */
+    }
+    #sidebar ul{
+        /* border: red solid; */
+        margin-top:15vh;
+        display: block;
+        padding: 5%;
+        width: 50%;
+    }
+    #sidebar ul li{
+        padding: 5%;
+    }
+}

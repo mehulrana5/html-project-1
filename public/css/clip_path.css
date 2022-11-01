@@ -1,0 +1,53 @@
+.card_clip_path_c{
+    border-radius: 20px;
+    position: absolute;
+    flex-direction: column;
+    clip-path: circle(15px at 30px 30px);
+    transition: .95s;
+}
+.card_clip_path_c:hover{
+    background-color: rgb(255 255 255 / 89%);
+    clip-path: circle(150% at 8px 14px);
+}
+/* ------------------------------------------- */
+.card_clip_path_s{
+    border-radius: 20px;
+    display: flex;
+    width: 400px;
+    margin: auto;
+    flex-direction: column;
+    clip-path: inset(14px 354px 165px 15px);
+    transition: .95s;
+}
+.card_clip_path_s:hover{
+    clip-path: inset(0px 0px -3px 0px);
+    background-color: grey;
+}
+/* ------------------------------------------- */
+.card_clip_path_p{
+    border-radius: 20px;
+    display: flex;
+    width: 400px;
+    margin: auto;
+    flex-direction: column;
+    clip-path: polygon(18px 14px, 55px 14px, 40px 47px, 5px 47px);
+    transition: .95s;
+}
+.card_clip_path_p:hover{
+    clip-path: polygon(0px 14px, 400px 18px, 373px 210px, -16px 210px);
+    background-color: grey;
+}
+/* common */
+.card_icon{
+    /* color: white; */
+    width: fit-content;
+    font-size: 30px;
+    margin:15px 15px 25px;
+}
+.card_heading,.clip_card_txt{
+    margin:0px 10px 10px;
+    max-width: 300px;
+}
+.card_heading{
+    font-weight: bold;
+}
